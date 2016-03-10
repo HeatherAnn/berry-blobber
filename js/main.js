@@ -32,8 +32,8 @@ var redCurrant = {
 // ##########################################################
 // END DO NOT CHANGE ZONE
 // ##########################################################
-
 var writeBerries = function (berries) {
+
   document.write('<h1>Berries</h1>');
 
   document.write('<ol>');
@@ -48,19 +48,18 @@ var writeBerries = function (berries) {
 
     if (berry.onShrub.true) {
       document.write('Yes');
-    }
-    else {
+    } else {
       document.write('No');
     }
 
-  document.write('</dd>');
-  document.write('<dt>Energy</dt>');
-  document.write('<dt>Carbs</dt>');
-  document.write('<dd>' + berry.energy[0] + ' kJ</dd>');
-  document.write('<dt>Protein</dt>');
-  document.write('<dd>' + berry.protein[0] + ' g</dd>');
-  document.write('</dl>');
-  document.write('</li>');
+    document.write('</dd>');
+    document.write('<dt>Energy</dt>');
+    document.write('<dt>Carbs</dt>');
+    document.write('<dd>' + berry.energy[0] + ' kJ</dd>');
+    document.write('<dt>Protein</dt>');
+    document.write('<dd>' + berry.protein[0] + ' g</dd>');
+    document.write('</dl>');
+    document.write('</li>');
  });
   document.write('</ol>');
 };
