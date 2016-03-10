@@ -33,9 +33,38 @@ var redCurrant = {
 // END DO NOT CHANGE ZONE
 // ##########################################################
 
+var writeBerries = function (berries) {
+  document.write('<h1>Berries</h1>');
 
-// Write your function here, name it `writeBerries`
+  document.write('<ol>');
 
+  berries.forEach(function (berry) {
+    document.write('<li>');
+    document.write('<h2>' + berry.name + '</h2>');
+    document.write('<dl>');
+    document.write('<dt>Latin</dt>');
+    document.write('<dd><i>' + berry.latin + '</i></dd>');
+    document.write('<dd>');
+
+    if (berry.onShrub.true) {
+      document.write('Yes');
+    }
+    else {
+      document.write('No');
+    }
+
+  document.write('</dd>');
+  document.write('<dt>Energy</dt>');
+  document.write('<dt>Carbs</dt>');
+  document.write('<dd>' + berry.energy[0] + ' kJ</dd>');
+  document.write('<dt>Protein</dt>');
+  document.write('<dd>' + berry.protein[0] + ' g</dd>');
+  document.write('</dl>');
+  document.write('</li>');
+ });
+  document.write('</ol>');
+};
+writeBerries(berries);
 
 // ##########################################################
 // START DO NOT CHANGE ZONE
@@ -47,34 +76,3 @@ writeBerries([blueberries, grapes, redCurrant]);
 // ##########################################################
 // END DO NOT CHANGE ZONE
 // ##########################################################
-
-var writeBerries = function (bugs) {
-  document.write('<h1>Berries</h1>');
-
-  document.write('<ol>');
-
-  bugs.forEach(function (berry) {
-    document.write('<li>');
-    document.write('<h2>' + berry.name + '</h2>');
-    document.write('<img src="images/' + berry.img + '" alt="">');
-    document.write('<dl>');
-    document.write('<dt>Family</dt>');
-    document.write('<dd><i>' + berry.family + '</i></dd>');
-    document.write('<dt>Size</dt>');
-    document.write('<dd>' + berry.size[0] + '–' + berry.size[1] + ' mm</dd>');
-    document.write('<dt>Eats</dt>');
-
-    document.write('<dd>');
-
-    if (berry.onShrub.true) {
-      document.write('Yes');
-    }
-    else {
-      document.write('No');
-    }
-  });
-
-  document.write('</ol>');
-};
-
-writeInsects(insects);
