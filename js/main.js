@@ -47,3 +47,34 @@ writeBerries([blueberries, grapes, redCurrant]);
 // ##########################################################
 // END DO NOT CHANGE ZONE
 // ##########################################################
+
+var writeBerries = function (bugs) {
+  document.write('<h1>Berries</h1>');
+
+  document.write('<ol>');
+
+  bugs.forEach(function (berry) {
+    document.write('<li>');
+    document.write('<h2>' + berry.name + '</h2>');
+    document.write('<img src="images/' + berry.img + '" alt="">');
+    document.write('<dl>');
+    document.write('<dt>Family</dt>');
+    document.write('<dd><i>' + berry.family + '</i></dd>');
+    document.write('<dt>Size</dt>');
+    document.write('<dd>' + berry.size[0] + '–' + berry.size[1] + ' mm</dd>');
+    document.write('<dt>Eats</dt>');
+
+    document.write('<dd>');
+
+    if (berry.onShrub.true) {
+      document.write('Yes');
+    }
+    else {
+      document.write('No');
+    }
+  });
+
+  document.write('</ol>');
+};
+
+writeInsects(insects);
